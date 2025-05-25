@@ -46,10 +46,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="views\checkList\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="resources\images\icons8-close-50-red.png" />
     <Resource Include="resources\images\icons8-close-50.png" />
     <Resource Include="resources\images\icons8-delete-trash-50.png" />

@@ -1,23 +1,69 @@
-﻿<Page
+﻿<UserControl
     x:Class="todoApp.views.home.Home"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:layout="clr-namespace:todoApp.layout"
-    xmlns:local="clr-namespace:todoApp.views.home"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Home"
-    d:DesignHeight="450"
-    d:DesignWidth="800"
-    mc:Ignorable="d">
-    <layout:Layout>
-        <!--  이 부분이 ContentPresenter로 들어감  -->
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--  전체를 감싸는 Border 추가  -->
+    <Border
+        Margin="2"
+        BorderThickness="1.5"
+        CornerRadius="10">
+
         <Grid>
-            <TextBlock
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                FontSize="30"
-                Text="🏠 Home 화면입니다" />
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <!--  왼쪽  -->
+            <Grid Grid.Column="0" Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1.8*" />
+                </Grid.RowDefinitions>
+
+                <Border
+                    Grid.Row="0"
+                    Margin="10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    BorderBrush="LightGray"
+                    BorderThickness="1.5"
+                    CornerRadius="10" />
+
+                <Border
+                    Grid.Row="1"
+                    Margin="10,0,10,10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    BorderBrush="LightGray"
+                    BorderThickness="1.5"
+                    CornerRadius="10" />
+            </Grid>
+
+            <Grid Grid.Column="1" Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3.5*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Border
+                    Grid.Row="0"
+                    Margin="2,10,10,10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    BorderBrush="LightGray"
+                    BorderThickness="1.5"
+                    CornerRadius="10" />
+
+                <Border
+                    Grid.Row="1"
+                    Margin="2,0,10,10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    BorderBrush="LightGray"
+                    BorderThickness="1.5"
+                    CornerRadius="10" />
+            </Grid>
         </Grid>
-    </layout:Layout>
-</Page>
+    </Border>
+</UserControl>

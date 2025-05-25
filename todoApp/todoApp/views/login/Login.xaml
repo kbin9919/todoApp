@@ -204,11 +204,12 @@
                         Margin="10,4,10,15"
                         VerticalAlignment="Top"
                         Background="#5C4FEB"
+                        Click="Button_Click"
                         Content="login"
                         FontSize="22"
                         FontWeight="SemiBold"
                         Foreground="White"
-                        Style="{StaticResource RoundedButtonStyle}" Click="Button_Click" />
+                        Style="{StaticResource RoundedButtonStyle}" />
                 </Grid>
 
             </Grid>

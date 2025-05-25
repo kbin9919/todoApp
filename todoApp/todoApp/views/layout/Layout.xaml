@@ -1,12 +1,14 @@
-﻿<UserControl
+﻿<Window
     x:Class="todoApp.layout.Layout"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:home="clr-namespace:todoApp.views.home"
     xmlns:local="clr-namespace:todoApp.layout"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Width="1000"
     Height="800"
+    Background="White"
     mc:Ignorable="d">
 
 
@@ -36,13 +38,19 @@
                     <RowDefinition Height="1*" />
                     <RowDefinition Height="0.2*" />
                 </Grid.RowDefinitions>
-                <Button Grid.Row="1" Style="{StaticResource RoundedIconButton}">
+                <Button
+                    Grid.Row="1"
+                    Click="HomeButton_Click"
+                    Style="{StaticResource RoundedIconButton}">
                     <Image
                         Width="24"
                         Height="24"
                         Source="/resources/images/icons8-집-50.png" />
                 </Button>
-                <Button Grid.Row="2" Style="{StaticResource RoundedIconButton}">
+                <Button
+                    Grid.Row="2"
+                    Click="CheckListButton_Click"
+                    Style="{StaticResource RoundedIconButton}">
                     <Image
                         Width="24"
                         Height="24"
@@ -74,6 +82,7 @@
                 </Button>
             </Grid>
         </Border>
+        <!--  본문 콘텐츠  -->
         <Border
             Grid.RowSpan="2"
             Grid.Column="1"
@@ -82,8 +91,10 @@
             VerticalAlignment="Stretch"
             BorderBrush="LightGray"
             BorderThickness="1.5"
-            CornerRadius="10" />
+            CornerRadius="10">
+            <ContentControl x:Name="MainContent" Grid.Column="1" />
+        </Border>
     </Grid>
 
 
-</UserControl>
+</Window>

@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="views\checkList\CheckList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="views\home\Home.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,6 +22,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="styles\Button.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\checkList\CheckList.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\home\Home.xaml">
