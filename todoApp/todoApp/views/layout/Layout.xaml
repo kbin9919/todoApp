@@ -1,0 +1,89 @@
+﻿<UserControl
+    x:Class="todoApp.layout.Layout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:todoApp.layout"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="1000"
+    Height="800"
+    mc:Ignorable="d">
+
+
+    <Grid Margin="0,25,0,25">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="7*" />
+        </Grid.ColumnDefinitions>
+
+        <!--  사이드바  -->
+        <Border
+            Grid.RowSpan="2"
+            Grid.Column="0"
+            Height="460px"
+            Margin="25,0,20,0"
+            VerticalAlignment="Top"
+            Background="#6C4EFF"
+            CornerRadius="35">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="0.2*" />
+                </Grid.RowDefinitions>
+                <Button Grid.Row="1" Style="{StaticResource RoundedIconButton}">
+                    <Image
+                        Width="24"
+                        Height="24"
+                        Source="/resources/images/icons8-집-50.png" />
+                </Button>
+                <Button Grid.Row="2" Style="{StaticResource RoundedIconButton}">
+                    <Image
+                        Width="24"
+                        Height="24"
+                        Source="/resources/images/icons8-체크리스트-50.png" />
+                </Button>
+                <Button Grid.Row="3" Style="{StaticResource RoundedIconButton}">
+                    <Image
+                        Width="24"
+                        Height="24"
+                        Source="/resources/images/icons8-문서-50.png" />
+                </Button>
+                <Button Grid.Row="4" Style="{StaticResource RoundedIconButton}">
+                    <Image
+                        Width="24"
+                        Height="24"
+                        Source="/resources/images/icons8-오늘-50.png" />
+                </Button>
+                <Button Grid.Row="5" Style="{StaticResource RoundedIconButton}">
+                    <Image
+                        Width="24"
+                        Height="24"
+                        Source="/resources/images/icons8-전화-회의-50.png" />
+                </Button>
+                <Button Grid.Row="6" Style="{StaticResource RoundedIconButton}">
+                    <Image
+                        Width="24"
+                        Height="24"
+                        Source="/resources/images/icons8-설정-50.png" />
+                </Button>
+            </Grid>
+        </Border>
+        <Border
+            Grid.RowSpan="2"
+            Grid.Column="1"
+            Margin="0,0,20,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            BorderBrush="LightGray"
+            BorderThickness="1.5"
+            CornerRadius="10" />
+    </Grid>
+
+
+</UserControl>

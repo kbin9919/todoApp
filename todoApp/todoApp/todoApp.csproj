@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resources\images\icons8-calendar-50.png" />
+    <None Remove="resources\images\icons8-close-50-red.png" />
+    <None Remove="resources\images\icons8-close-50.png" />
+    <None Remove="resources\images\icons8-delete-trash-50.png" />
+    <None Remove="resources\images\icons8-logout-50.png" />
+    <None Remove="resources\images\icons8-plus-50.png" />
+    <None Remove="resources\images\icons8-today-50.png" />
+    <None Remove="resources\images\icons8-user-groups-50.png" />
+    <None Remove="resources\images\icons8-긴-화살표-왼쪽-50.png" />
+    <None Remove="resources\images\icons8-날짜-50.png" />
+    <None Remove="resources\images\icons8-링크-50.png" />
+    <None Remove="resources\images\icons8-문서-50.png" />
+    <None Remove="resources\images\icons8-사용자-50.png" />
+    <None Remove="resources\images\icons8-사용자이미지-50.png" />
+    <None Remove="resources\images\icons8-설정-50.png" />
+    <None Remove="resources\images\icons8-수색-50.png" />
+    <None Remove="resources\images\icons8-오늘-50.png" />
+    <None Remove="resources\images\icons8-웃는-50.png" />
+    <None Remove="resources\images\icons8-을-더한-50.png" />
+    <None Remove="resources\images\icons8-자물쇠-50-white.png" />
+    <None Remove="resources\images\icons8-자물쇠-50.png" />
+    <None Remove="resources\images\icons8-잠금-해제-50.png" />
+    <None Remove="resources\images\icons8-전화-회의-50.png" />
+    <None Remove="resources\images\icons8-집-50.png" />
+    <None Remove="resources\images\icons8-체크리스트-50.png" />
+    <None Remove="resources\images\icons8-폐물-50.png" />
+    <None Remove="resources\images\icons8-화살표를-정렬-50.png" />
+    <None Remove="resources\images\icons8-휴지통-삭제-50.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\images\icons8-집-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="views\checkList\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\images\icons8-close-50-red.png" />
+    <Resource Include="resources\images\icons8-close-50.png" />
+    <Resource Include="resources\images\icons8-delete-trash-50.png" />
+    <Resource Include="resources\images\icons8-logout-50.png" />
+    <Resource Include="resources\images\icons8-plus-50.png" />
+    <Resource Include="resources\images\icons8-today-50.png" />
+    <Resource Include="resources\images\icons8-user-groups-50.png" />
+    <Resource Include="resources\images\icons8-긴-화살표-왼쪽-50.png" />
+    <Resource Include="resources\images\icons8-날짜-50.png" />
+    <Resource Include="resources\images\icons8-링크-50.png" />
+    <Resource Include="resources\images\icons8-문서-50.png" />
+    <Resource Include="resources\images\icons8-사용자-50.png" />
+    <Resource Include="resources\images\icons8-사용자이미지-50.png" />
+    <Resource Include="resources\images\icons8-설정-50.png" />
+    <Resource Include="resources\images\icons8-수색-50.png" />
+    <Resource Include="resources\images\icons8-오늘-50.png" />
+    <Resource Include="resources\images\icons8-웃는-50.png" />
+    <Resource Include="resources\images\icons8-을-더한-50.png" />
+    <Resource Include="resources\images\icons8-자물쇠-50-white.png" />
+    <Resource Include="resources\images\icons8-자물쇠-50.png" />
+    <Resource Include="resources\images\icons8-잠금-해제-50.png" />
+    <Resource Include="resources\images\icons8-전화-회의-50.png" />
+    <Resource Include="resources\images\icons8-체크리스트-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\images\icons8-폐물-50.png" />
+    <Resource Include="resources\images\icons8-화살표를-정렬-50.png" />
+    <Resource Include="resources\images\icons8-휴지통-삭제-50.png" />
+  </ItemGroup>
+
+</Project>
