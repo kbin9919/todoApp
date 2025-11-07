@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace todoApp.viewModel.login
+namespace todoApp.login.vo
 {
-    public class LoginViewModel
+    public class UserVo
     {
-       
+        public string Id { get; set; }
+        public string Pwd { get; set; }
     }
 }

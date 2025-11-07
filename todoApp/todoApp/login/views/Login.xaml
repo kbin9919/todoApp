@@ -130,7 +130,8 @@
                             BorderThickness="1"
                             CornerRadius="10">
                             <TextBox
-                                Name="txtId"
+                                Name="Id"
+                                Text="{Binding UserId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                 Margin="3,3,3,-2"
                                 Padding="0"
                                 VerticalContentAlignment="Center"
@@ -168,7 +169,8 @@
                             BorderThickness="1"
                             CornerRadius="10">
                             <PasswordBox
-                                Name="txtpwd"
+                                Name="Pwd"
+                                PasswordChanged="Pwd_PasswordChanged"
                                 Margin="3,3,3,-2"
                                 Padding="0"
                                 VerticalContentAlignment="Center"
@@ -181,6 +183,10 @@
                     </Grid>
                 </Grid>
                 <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="24*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="2.5*" />
@@ -188,28 +194,28 @@
 
                     <CheckBox
                         Grid.Row="0"
-                        Margin="22.5,0,0,0"
+                        Margin="22,0,0,69"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Bottom"
                         Content="로그인 상태 유지"
                         FontSize="10"
                         FontWeight="SemiBold"
                         Foreground="LightGray"
-                        Style="{StaticResource RoundedCheckBoxStyle}" />
+                        Style="{StaticResource RoundedCheckBoxStyle}" Grid.RowSpan="2" />
 
                     <Button
                         Grid.Row="1"
                         Width="310"
                         Height="43"
-                        Margin="10,4,10,15"
+                        Margin="19,4,19,0"
                         VerticalAlignment="Top"
                         Background="#5C4FEB"
-                        Click="Button_Click"
                         Content="login"
                         FontSize="22"
                         FontWeight="SemiBold"
                         Foreground="White"
-                        Style="{StaticResource RoundedButtonStyle}" />
+                        Style="{StaticResource RoundedButtonStyle}"
+                        Command="{Binding LoginCommand}" Grid.ColumnSpan="2"/>
                 </Grid>
 
             </Grid>

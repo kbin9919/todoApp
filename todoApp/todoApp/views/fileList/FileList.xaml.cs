@@ -12,28 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using todoApp.layout;
-using todoApp.views.home;
 
-namespace todoApp
+namespace todoApp.views.fileList
 {
     /// <summary>
-    /// Login.xaml에 대한 상호 작용 논리
+    /// FileList.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class Login : Window
+    public partial class FileList : UserControl
     {
-        public Login()
+        public FileList()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            // Home 생성 (Layout 포함되어 있음)
-            var layout = new Layout();
-
-            layout.Show();
-            this.Close();
         }
     }
 }
