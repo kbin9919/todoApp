@@ -23,6 +23,8 @@ namespace todoApp.views.home
         public Home()
         {
             InitializeComponent();
+            Browser1.Source = new Uri("https://weather.naver.com/");
+            Browser2.Source = new Uri("https://www.naver.com");
         }
     }
 }

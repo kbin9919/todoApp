@@ -76,4 +76,17 @@
     <Resource Include="resources\images\icons8-휴지통-삭제-50.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4022.49" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="file\service\" />
+    <Folder Include="file\viewModel\" />
+    <Folder Include="home\service\" />
+    <Folder Include="home\viewModel\" />
+  </ItemGroup>
+
 </Project>

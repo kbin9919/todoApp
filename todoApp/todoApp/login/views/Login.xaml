@@ -5,6 +5,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:todoApp"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:todoApp.login.viewModel"
+      
     Title="Login"
     Width="410"
     Height="420"
@@ -131,7 +133,7 @@
                             CornerRadius="10">
                             <TextBox
                                 Name="Id"
-                                Text="{Binding UserId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Text="{Binding UserId, UpdateSourceTrigger=PropertyChanged}"
                                 Margin="3,3,3,-2"
                                 Padding="0"
                                 VerticalContentAlignment="Center"
@@ -168,9 +170,9 @@
                             BorderBrush="LightGray"
                             BorderThickness="1"
                             CornerRadius="10">
-                            <PasswordBox
+                            <TextBox
                                 Name="Pwd"
-                                PasswordChanged="Pwd_PasswordChanged"
+                                Text="{Binding UserPwd, UpdateSourceTrigger=PropertyChanged}"
                                 Margin="3,3,3,-2"
                                 Padding="0"
                                 VerticalContentAlignment="Center"
@@ -215,6 +217,7 @@
                         FontWeight="SemiBold"
                         Foreground="White"
                         Style="{StaticResource RoundedButtonStyle}"
+                        IsDefault="True"
                         Command="{Binding LoginCommand}" Grid.ColumnSpan="2"/>
                 </Grid>
 

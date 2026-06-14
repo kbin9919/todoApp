@@ -56,8 +56,11 @@
                         Height="24"
                         Source="/resources/images/icons8-체크리스트-50.png" />
                 </Button>
-                <Button Grid.Row="3" Style="{StaticResource RoundedIconButton}">
-                    <Image
+                <Button 
+                    Grid.Row="3" 
+                    Click="FileListButton_Click"
+                    Style="{StaticResource RoundedIconButton}">
+                        <Image
                         Width="24"
                         Height="24"
                         Source="/resources/images/icons8-문서-50.png" />

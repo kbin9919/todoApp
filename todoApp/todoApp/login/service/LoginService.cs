@@ -1,46 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using todoApp.login.verification;
-using todoApp.login.vo;
-using todoApp.login.dao;
+﻿using todoApp.context;
+using todoApp.login.dto;
+using todoApp.login.entity;
 
 namespace todoApp.login.service
 {
     public class LoginService
     {
-        public LoginChainFactory LoginChainFactory;
-        public LoginDao LoginDao;
         public LoginService()
         {
-            LoginChainFactory = new LoginChainFactory();
-            LoginDao = new LoginDao();
         }
 
-        public LoginChainResult LoginVerification(UserVo inputUserVo)
+        public UserDto LoginVerification(UserDto inputUser)
         {
-            UserVo vo = LoginDao.SelectUserVo(inputUserVo.Id);
+            // 나중에 분리
+            string sql = $"SELECT [Id],[Name],[Email],[Password],[CreatedAt],[DeletedAt],[DelYn] \r\nFROM [dbo].[User]\r\nWHERE [Id] = '{inputUser.Id}'";
+            var user = SessionContext.SqlRapper.SelectOne<UserEntity>(sql);
 
-            LoginChainContext context = new LoginChainContext()
+            if (user == null)
             {
-                UserVo = vo,
-                InputId = inputUserVo.Id,
-                InputPwd = inputUserVo.Pwd,
-            };
-
-            List<LoginChain<LoginChainContext>> chainResult = LoginChainFactory.LoginVerification();
-
-            foreach (var chain in chainResult)
-            {
-                var result = chain(context);
-                if (result != LoginChainResult.Success)
-                {
-                    return result;
-                }
+                return null;
             }
-            return LoginChainResult.Success;
+
+            if (inputUser.Password != user.Password)
+            {
+                return null;
+            }
+
+            return new UserDto() { Id = user.Id, Password = user.Password, Email = user.Email, Name = user.Name };
         }
 
 

@@ -26,21 +26,7 @@ namespace todoApp
         public Login()
         {
             InitializeComponent();
-            Init();
-        }
-        private void Init()
-        {
-            var vm = new LoginViewModel();
-            this.DataContext = vm;
-            vm.CloseAction = new Action(() => this.Close());
-        }
-
-        private void Pwd_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is LoginViewModel vm)
-            {
-                vm.UserPwd = Pwd.Password;
-            }
+            DataContext = new LoginViewModel();
         }
     }
 }

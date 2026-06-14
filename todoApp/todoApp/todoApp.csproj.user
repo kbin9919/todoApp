@@ -10,10 +10,10 @@
     <Compile Update="views\checkList\CheckList.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="views\fileList\FileList.xaml.cs">
+    <Compile Update="file\views\FileList.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="views\home\Home.xaml.cs">
+    <Compile Update="home\views\Home.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="views\layout\Layout.xaml.cs">
@@ -30,7 +30,7 @@
     <Page Update="views\checkList\CheckList.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="views\home\Home.xaml">
+    <Page Update="home\views\Home.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\layout\Layout.xaml">
